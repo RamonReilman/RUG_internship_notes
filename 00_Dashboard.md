@@ -5,12 +5,11 @@
 ---
 
 ## 📍 Quick Links
-- [[2026-09-02]] *(Today's Daily Note)*
-- [[Project Timeline & Hanze Planning]]
+- [Project Timeline & Hanze Planning](Project%20Timeline%20&%20Hanze%20Planning.md)
 - [[HPC & Server Access Details]]
 
 ## 🛠️ Tools Under Test
-- [[Savont]]
+- [Savont](Savont.md)
 
 ## 🗄️ Reference Databases
 - [[DB - SILVA]]
