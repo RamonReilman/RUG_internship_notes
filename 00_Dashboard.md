@@ -5,11 +5,11 @@
 ---
 
 ## 📍 Quick Links
-- [Project Timeline & Hanze Planning](Project%20Timeline%20&%20Hanze%20Planning.md)
+- [[Project Timeline & Hanze Planning]]
 - [[HPC & Server Access Details]]
 
 ## 🛠️ Tools Under Test
-- [Savont](Savont.md)
+- [[02_Tools/Savont]]
 
 ## 🗄️ Reference Databases
 - [[DB - SILVA]]
