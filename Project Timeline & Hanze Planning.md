@@ -1,0 +1,1 @@
+This note will contain the timeline of the incoming 20 weeks of my internship at the RUG. It will contain a chart showing on what topics i will be working in what week. It will also contain a plan of action, describing 
