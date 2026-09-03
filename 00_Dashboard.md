@@ -5,16 +5,16 @@
 ---
 
 ## 📍 Quick Links
-- [[Project Timeline & Hanze Planning]]
-- [[HPC & Server Access Details]]
+- [Project Timeline & Hanze Planning](Project%20Timeline%20&%20Hanze%20Planning.md)
+- [HPC & Server Access Details](HPC%20&%20Server%20Access%20Details)
 
 ## 🛠️ Tools Under Test
-- [[02_Tools/Savont]]
+- [Savont](02_Tools/Savont.md)
 
 ## 🗄️ Reference Databases
-- [[DB - SILVA]]
-- [[DB - PR2]]
-- [[DB - Greengenes2]]
+- [DB - SILVA](DB%20-%20SILVA)
+- [DB - PR2](DB%20-%20PR2)
+- [DB - Greengenes2](DB%20-%20Greengenes2)
 
 ---
 
