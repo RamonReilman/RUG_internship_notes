@@ -27,16 +27,40 @@ It starts by counting all k-mers in a sample (with a default k-value of 17), and
 1. Strand-bias test using Fisher's exact test
 2. Binomial test to filter out low frequency k-mers
 
+The long reads are filtered and indexed by Savont, (filtering based on length and quality). The default (but change is possible) assumes the length of full-length 16s rRNA amplicons are >= 1100 bp and <= 2000 bp. The retained reads are indexed using the SNPmers, with the requirement that the middle SNPmer base has a quality > 25.
+
+Savont performs 2 rounds of clustering:
+1. All reads are processed into primary clusters of about 95% identity.
+2. Processes each primary cluster seperately
+
+Clustering is done with this structure because highly divergente sequences may not have any shared SNPmers. And if 2 sequences share no SNPmers, then the second clustering step will not work.
+
+I won't go into detail about how to clustering works, as I do not think it is relevant for the project.
+
+For each cluster generated a SIMD partial order alignment is used to create a general consensus sequence (An ASV). 
+Some of the consensus sequences found in the previous step will be of low quality. Savont tries to gauge the quality of a consensus sequence by aligning the cluster's reads back and evaluating the alignment statistics. Low quality consensuses will have poorer statistics and will be filtered out. It will then merge similar sequences, filter out chimeras, and generate a final ASV quantification.
+
+These resulting ASVs can be used by taxonomic profilers. But Savont also implements two classification algorithms:
+- One that is minimap2 based
+- Edgar's sintax algorithm
+
+### Benchmarking
+Done using Zymo Microbial Community Standard reads were taken from Riisgaard-Jensen, M. et al. Nanopore sequencing reaches amplicon sequence variant (ASV) resolution (2026)
 
 ## Key finding
 > What are the key findings of this article?
 
+- Savont can work with lower sequencing depths
+- ASV-based profiling with noisy long read amplicons (or shallow samples) is now reliable with savont
 ## Strengths
 > What are the strengths of this article?
 
+### Clustering
+Clustering method enables parallelization. 
+
 ## Limitations
 > What are the limitations of this article?
-- Has not been officially certified by peer review (but it is the official paper, so i will include it anyway).
+- Has not been officially certified by peer review (but it is the official paper, so I will include it anyway).
 ### Methods
 SNPmers are limited by not being able to capture polymorphisms, if 2 sequences differ by a single indel (insertion / deletion) there are no SNPmers between them. Savont will leave the focus on indels for the future, and will focus on SNP's first.
 ## Important quotes
@@ -54,8 +78,6 @@ Savont uses a different approach: "Cluster-and-consensus". This works differentl
 (Shaw et al., 2026)
 
 > This is relevant to my project to show how Savont works differently compared to other tools, current in use. It also showcases that it is more suitable for the data that will eventually by generated via ONT sequencing.
-
-
 
 ## Related literature
 > Other papers/books related / mentioned by this article (link to their own article review)

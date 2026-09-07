@@ -28,14 +28,19 @@ The main goal of the project will be to look into ASV based tools and workflows,
 Thomas and I prepared 3 main tasks for the project, though these can be subject to change over the course of the project.
 ### Evaluation of ASV-based ONT workflows
 This is the first thing I will work on over the next couple of weeks.
-I will look into a tool called [Savont](/02_Tools/Savont.md), a tool that is used to generate taxonomic profiling for long read amplicons. I have to evaluate the Savont based workflow, and eventually compare it to the current approaches (that are based on a direct classification). They use the MinION GUI EPI2ME with kraken2/minimap2 (https://epi2me.nanoporetech.com/epi2me-docs/workflows/wf-16s/).
+I will look into a tool called [Savont](/02_Tools/Savont.md), a tool that is used to generate taxonomic profiling for long read amplicons. I have to evaluate the Savont based workflow, and eventually compare it to the current approaches (that are based on a direct classification). They use the [EPI2ME wf-s16](/02_Tools/EPI2ME%20wf-s16.md) with kraken2/minimap2.
 
-The comparing of these workflows will be prepared by doing literary research on the evaluation / comparing of metagenomic-related tools. The official literary work for this is planned to start on [2026-09-07](/01_Daily%20Notes/week2/2026-09-07.md).
+The comparing of these workflows will be prepared by doing literary research on the evaluation / comparing of metagenomic-related tools.
 It is expected to compare / evaluate the following results from the tools:
 - Community composition
 - Taxonomic resolution
 - Computational requirements
 
+#### Evaluation of tools
+For the evaluation of the tools I will be given data by my supervisor. This data has been run through the workflow before, but can be done again on a cluster to compare the resources it needs on the same computing cluster. I will also take big inspiration from the Critical Assessment of Metagenome Interpretation (CAMI) (Sczyrba et al., 2017) and possible variations on that. I will keep clear records on the data going in and out of the tools, and will compare them based on the CAMI, and metrics specified above.
+
+#### Products
+Comparisons of the tools will be logged within the daily notes, but eventually there will be a compilation of the results from all of the testing, comparing, evaluation in a single note, that will conclude with what tool works the best based on the testing I had done.
 
 ### Evaluation of reference databases
 The second part of the project will be about evaluation available 16S and 18S reference databases (Silva, PR2, etc) to see how much these suit microbial communities found in marine environments. If it is needed, I will need to create a custom database combined from the previously mentioned examples. Or run the new workflow on different databases separately and combine these results into 1 result. 
@@ -44,17 +49,17 @@ The second part of the project will be about evaluation available 16S and 18S re
 The last planned part of this project more or less requires the last previous tasks to be done and completed, as they will be combined in a new workflow. From what I could tell from the MinION GUI is that customization for the workflows (the changing of parameters and such) seems to be very limited. By implementing and creating a new workflow, fit for marine environments, it will be more accurate for the any and all marine amplicon datasets interested in viral or bacterial taxonomic classification.
 
 ### Expected methods and data
-The Oxford Nanopore will be used for the amplicon sequencing. I will get access to existing datasets from PHYVIR and previous student projects. I will run most of the computing on the cluster the RUG gave me access to, so I will make use of linux (and the command line). In case i need to script anything, Python 3.12 will be used.
+The Oxford Nanopore will be used for the amplicon sequencing. I will get access to existing datasets from PHYVIR and previous student projects. I will run most of the computing on the cluster the RUG gave me access to, so I will make use of linux (and the command line). In case I need to script anything, Python 3.12 will be used.
 
 ## Organisation and Communication
 ### Supervisor
 My supervisor for the oncoming project will be Thomas Hackl. Most of the communication at first will be through email, and if the need for more frequent or faster contact arises I can be part of the slack-like environment they use. 
 
 ### Hanze contact
-My Hanze contact for this project is Ronald Wedema. We have an established end-of-the-week email that i send at the end of every week. This email will contain a brief overview of what i did that whole week in terms of work, meetings, and other important things. 
+My Hanze contact for this project is Ronald Wedema. We have an established end-of-the-week email that I send at the end of every week. This email will contain a brief overview of what I did that whole week in terms of work, meetings, and other important things. 
 
 ### Meetings
-Thomas and I will at the very least see each other weekly or bi-weekly at the start of every week to see kick off that new week, discuss issues, or to discuss the work i have done the previous week(s).
+Thomas and I will at the very least see each other weekly or bi-weekly at the start of every week to see kick off that new week, discuss issues, or to discuss the work I have done the previous week(s).
 
 There is a weekly meeting, this weekly meeting is every Tuesday at 10:30. I've been to 1 meeting so far, and it appears it is a combination of someone presenting the project they're currently working on, and housekeeping. 
 
@@ -65,3 +70,8 @@ Nearing the end of september there will be people coming that will sequence (i b
 ## Data management
 
 All of the data will be stored on the computing cluster I have access too. It will remain there until it is no longer needed. The products that I will deliver will be stored on private github repository, I think I will separate the note-keeping repository and the eventually workflow repository, though a lot of the daily notes will contain commands, or runs of tools, for the scripts. 
+
+## Sources
+Sczyrba, A., Hofmann, P., Belmann, P., Koslicki, D., Janssen, S., Dröge, J., Gregor, I., Majda, S., Fiedler, J., Dahms, E., Bremges, A., Fritz, A., Garrido-Oter, R., Jørgensen, T. S., Shapiro, N., Blood, P. D., Gurevich, A., Bai, Y., Turaev, D., … McHardy, A. C. (2017). Critical Assessment of Metagenome Interpretation—A benchmark of metagenomics software. _Nature Methods_, _14_(11), 1063–1071. [https://doi.org/10.1038/nmeth.4458](https://doi.org/10.1038/nmeth.4458)
+
+Shaw, J., Riisgaard-Jensen, M., Andersen, K. S., Kirkegaard, R., Dueholm, M. K. D., & Li, H. (2026). _Sensitive long-read amplicon sequence variant recovery with savont_ (p. 2026.05.26.727271). bioRxiv. [https://doi.org/10.64898/2026.05.26.727271](https://doi.org/10.64898/2026.05.26.727271)

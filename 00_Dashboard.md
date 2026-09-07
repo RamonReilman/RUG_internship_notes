@@ -4,21 +4,21 @@
 
 ---
 
-## 📍 Quick Links
+##  Quick Links
 - [Project Timeline & Hanze Planning](/Project%20Timeline%20&%20Hanze%20Planning.md)
 
 
-## 🛠️ Tools Under Test
+## Tools Under Test
 - [Savont](/02_Tools/Savont.md)
 
-## 🗄️ Reference Databases
+##  Reference Databases
 - [DB - SILVA](DB%20-%20SILVA)
 - [DB - PR2](DB%20-%20PR2)
 - [DB - Greengenes2](DB%20-%20Greengenes2)
 
 ---
 
-## 📌 Active Tasks
+## Active Tasks
 ```dataview
 TASK
 FROM "01_Daily Notes"
