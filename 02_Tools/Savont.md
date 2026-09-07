@@ -2,7 +2,7 @@
 
 - **Category:** #tool/ASV #tool/classifier
 - **Repository / Link:** https://github.com/bluenote-1577/savont
-- **Primary Paper / Citation:** 
+- **Primary Paper / Citation:** https://www.biorxiv.org/content/10.64898/2026.05.26.727271v1
 
 ## Overview
 ### Brief summary of tool
