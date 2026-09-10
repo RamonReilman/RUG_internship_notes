@@ -11,3 +11,5 @@
 # System files
 .trash/
 .DS_Store
+
+.jupymd/
