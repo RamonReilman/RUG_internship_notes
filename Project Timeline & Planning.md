@@ -1,5 +1,5 @@
 # Project Timeline & Planning
-This file will contain everything related to the Timeline of my internship, a.k.a. the Plan of Action. It will use the Hanze supplied template to create a timeline for the next 20 weeks, to make a clear showcase how what and how I will do things. The template starts with a table I have to fill in.
+This file will contain everything related to the Timeline of my internship, a.k.a. the Plan of Action. It will use the Hanze supplied template to create a timeline for the next 20 weeks, to make a clear showcase how what and how I will do things. The template starts with a tableIhave to fill in.
 
 | Student               | Ramon Reilman                                                                                                       |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -18,11 +18,19 @@ The department is currently working with a 16S and 18S built in pipeline for nan
 "How can a flexible ASV-based workflow be developed for taxonomic analysis of universal 16S/18S ONT amplicon sequencing data for marine microbial communities?".
 
 
-The main goal of the project will be to look into ASV based tools and workflows, and to create a new workflow that uses either a custom database, or merges the classification of multiple databases using an ASV based tool like [Savont](/02_Tools/Savont.md) (and possibly others if I find other interesting tools).
+The main goal of the project will be to look into ASV based tools and workflows, and to create a new workflow that uses either a custom database, or merges the classification of multiple databases using an ASV based tool like [Savont](/02_Tools/Savont.md) (and possibly others ifIfind other interesting tools).
 
 ## Portfolio 
+This section will showcase an overview of all of the expected portfolio-parts, thatIwill deliver on during this project.
 
-
+- Plan of Action. A description and overview of the projectIwill be working on for the oncoming 20 weeks. It will include the following: Research questions, the way I will approach things, planning, organization.
+- Reports / documentation of findings. The first couple of weeks of the project will be experimenting and researching both new tools (Savont), as comparing (and possibly creating new) databases. The steps for this will be logged within the daily notes, but will also get an eventual report, when the milestone has been hit.
+- Justification-document. A document filled with justifications for choices in methods, and technical choices. These justifications will also be logged during the daily notes, but will eventually be compiled into a justification-document.
+- Daily logging, I will keep daily logs, that are used to log whatever I do in a day (from writing, to reading, to programming).
+- Evaluation, development plan. Documents that will discuss the progress I have made. Will enable to give myself feedback.
+- Poster-presentation. Presenting the project, methods, results, and a final workflow.
+- Workflow manual, the eventual workflow will be documented well, and a in-depth manual of the workflow will also be created.
+- A workflow overview. Documentation on how the workflow works, what tools are used, databases, and relevant parameters.
 ## Methods
 
 Thomas and I prepared 3 main tasks for the project, though these can be subject to change over the course of the project.
@@ -50,6 +58,28 @@ The last planned part of this project more or less requires the last previous ta
 
 ### Expected methods and data
 The Oxford Nanopore will be used for the amplicon sequencing. I will get access to existing datasets from PHYVIR and previous student projects. I will run most of the computing on the cluster the RUG gave me access to, so I will make use of linux (and the command line). In case I need to script anything, Python 3.12 will be used.
+
+## Planning / Gantt-chart
+The internship will take place over about 20 weeks. The global planning for this is divided into 3 global milestones, representing the 3 tasks mentioned above. 
+
+### Milestone 1: Evaluation of Savont
+The first milestone of the project is the evaluation of Savont, compared to the currently used in-house workflow. This work includes literary research, setting up tools, getting data to compare the tools, and eventually comparing it to the in-house workflow. The work for this was started in week 1, and is planned to end around week 4 / 5. Depending on the time computing takes, and other factors
+
+### Milestone 2: Evaluation (creation) of databases
+Nearing the end of milestone 1 will show a transition towards the evaluation of reference databases. Databases such as SILVA will be investigated using available datasets. Their suitability for the intended 16S/18S will be assessed. As I have less experience with this (compared to Milestone 1), I will take some more time for literature research. This means that this Milestone should last from week 4/5 until week 9 / 10. This should give me more than enough time to assess the databases, and possibly create a new one for the new workflow.
+
+### Milestone 3: Workflow creation
+The results of the previous 2 milestones will be used to create a new analysis workflow. The workflow will be implemented and tested using available, and newly generated datasets. Updating the workflow based on feedback. This milestone will take the longest, as I have the least experience with working with NextFlow. Working towards this milestone should start around week 10, and will continue to be refined and improved on until week 17 / 18.
+
+### Portfolio
+The development of my portfolio will be done throughout the whole internship. This includes, daily note writing, evaluations of myself, etc. At the end of every milestone I will compile my daily notes (and findings) into an easily over viewed report that will hold all important information on the results of the milestone. 
+
+The planning as soon above is to be used as an indicator. It may be changed over the span of the project. Both of my supervisors will get a weekly update on the progress of the 3 milestones. The Gantt-chart (below) gives an even better overview on the planning and progress of this project.
+
+### Gantt-chart
+![Online Gantt 20260910](Resources/Gantt/Online%20Gantt%2020260910(2).png)
+This Gantt-chart shows the predicted schedule and planning for the project. Divided into multiple milestones, rounding up the portfolio, and eventually ending with the poster presentation.
+
 
 ## Organisation and Communication
 ### Supervisor
