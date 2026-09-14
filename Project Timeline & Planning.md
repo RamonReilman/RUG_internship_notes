@@ -71,6 +71,9 @@ Nearing the end of milestone 1 will show a transition towards the evaluation of 
 ### Milestone 3: Workflow creation
 The results of the previous 2 milestones will be used to create a new analysis workflow. The workflow will be implemented and tested using available, and newly generated datasets. Updating the workflow based on feedback. This milestone will take the longest, as I have the least experience with working with NextFlow. Working towards this milestone should start around week 10, and will continue to be refined and improved on until week 17 / 18.
 
+### Last strech
+The last couple of weeks will be used to compile my portfolio, create documentation, and testing of the workflow. It will also be used to create the poster, for the poster presentation at the end.
+
 ### Portfolio
 The development of my portfolio will be done throughout the whole internship. This includes, daily note writing, evaluations of myself, etc. At the end of every milestone I will compile my daily notes (and findings) into an easily over viewed report that will hold all important information on the results of the milestone. 
 
@@ -99,7 +102,8 @@ Nearing the end of september there will be people coming that will sequence (i b
 
 ## Data management
 
-All of the data will be stored on the computing cluster I have access too. It will remain there until it is no longer needed. The products that I will deliver will be stored on private github repository, I think I will separate the note-keeping repository and the eventually workflow repository, though a lot of the daily notes will contain commands, or runs of tools, for the scripts. 
+Project data will be stored on the RUG computing cluster. This includes sequencing data, analyses results, and other computational files needed for the project.
+This data will remain there, for as long as it is required for the project. Code and workflow development will be managed using private github repositories. The daily documentation is also stored on a private github repo, but will be seperated from the code and workflow files. Git is used as a version control tool, in all of the repositories this is used. 
 
 ## Sources
 Sczyrba, A., Hofmann, P., Belmann, P., Koslicki, D., Janssen, S., Dröge, J., Gregor, I., Majda, S., Fiedler, J., Dahms, E., Bremges, A., Fritz, A., Garrido-Oter, R., Jørgensen, T. S., Shapiro, N., Blood, P. D., Gurevich, A., Bai, Y., Turaev, D., … McHardy, A. C. (2017). Critical Assessment of Metagenome Interpretation—A benchmark of metagenomics software. _Nature Methods_, _14_(11), 1063–1071. [https://doi.org/10.1038/nmeth.4458](https://doi.org/10.1038/nmeth.4458)
