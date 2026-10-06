@@ -1,0 +1,286 @@
+tool	rank	metric	sample	value
+Gold standard	superkingdom	Bray-Curtis distance	simdata_rep0	0.0
+Gold standard	phylum	Bray-Curtis distance	simdata_rep0	0.0
+Gold standard	class	Bray-Curtis distance	simdata_rep0	0.0
+Gold standard	order	Bray-Curtis distance	simdata_rep0	0.0
+Gold standard	family	Bray-Curtis distance	simdata_rep0	0.0
+Gold standard	genus	Bray-Curtis distance	simdata_rep0	0.0
+Gold standard	species	Bray-Curtis distance	simdata_rep0	0.0
+Gold standard	superkingdom	Shannon diversity	simdata_rep0	0.0
+Gold standard	superkingdom	Shannon equitability	simdata_rep0	0.0
+Gold standard	phylum	Shannon diversity	simdata_rep0	1.5184804538518326
+Gold standard	phylum	Shannon equitability	simdata_rep0	0.7302347401529539
+Gold standard	class	Shannon diversity	simdata_rep0	1.5184804538518326
+Gold standard	class	Shannon equitability	simdata_rep0	0.7302347401529539
+Gold standard	order	Shannon diversity	simdata_rep0	1.837003775831927
+Gold standard	order	Shannon equitability	simdata_rep0	0.797800603079244
+Gold standard	family	Shannon diversity	simdata_rep0	1.837003775831927
+Gold standard	family	Shannon equitability	simdata_rep0	0.797800603079244
+Gold standard	genus	Shannon diversity	simdata_rep0	2.0469002210297536
+Gold standard	genus	Shannon equitability	simdata_rep0	0.8237332461581142
+Gold standard	species	Shannon diversity	simdata_rep0	2.1660359537306637
+Gold standard	species	Shannon equitability	simdata_rep0	0.7645156543804862
+Gold standard	superkingdom	True positives	simdata_rep0	1.0
+Gold standard	superkingdom	False negatives	simdata_rep0	0.0
+Gold standard	superkingdom	False positives	simdata_rep0	0.0
+Gold standard	superkingdom	Completeness	simdata_rep0	1.0
+Gold standard	superkingdom	Purity	simdata_rep0	1.0
+Gold standard	superkingdom	F1 score	simdata_rep0	1.0
+Gold standard	superkingdom	Jaccard index	simdata_rep0	1.0
+Gold standard	phylum	True positives	simdata_rep0	8.0
+Gold standard	phylum	False negatives	simdata_rep0	0.0
+Gold standard	phylum	False positives	simdata_rep0	0.0
+Gold standard	phylum	Completeness	simdata_rep0	1.0
+Gold standard	phylum	Purity	simdata_rep0	1.0
+Gold standard	phylum	F1 score	simdata_rep0	1.0
+Gold standard	phylum	Jaccard index	simdata_rep0	1.0
+Gold standard	class	True positives	simdata_rep0	8.0
+Gold standard	class	False negatives	simdata_rep0	0.0
+Gold standard	class	False positives	simdata_rep0	0.0
+Gold standard	class	Completeness	simdata_rep0	1.0
+Gold standard	class	Purity	simdata_rep0	1.0
+Gold standard	class	F1 score	simdata_rep0	1.0
+Gold standard	class	Jaccard index	simdata_rep0	1.0
+Gold standard	order	True positives	simdata_rep0	10.0
+Gold standard	order	False negatives	simdata_rep0	0.0
+Gold standard	order	False positives	simdata_rep0	0.0
+Gold standard	order	Completeness	simdata_rep0	1.0
+Gold standard	order	Purity	simdata_rep0	1.0
+Gold standard	order	F1 score	simdata_rep0	1.0
+Gold standard	order	Jaccard index	simdata_rep0	1.0
+Gold standard	family	True positives	simdata_rep0	10.0
+Gold standard	family	False negatives	simdata_rep0	0.0
+Gold standard	family	False positives	simdata_rep0	0.0
+Gold standard	family	Completeness	simdata_rep0	1.0
+Gold standard	family	Purity	simdata_rep0	1.0
+Gold standard	family	F1 score	simdata_rep0	1.0
+Gold standard	family	Jaccard index	simdata_rep0	1.0
+Gold standard	genus	True positives	simdata_rep0	12.0
+Gold standard	genus	False negatives	simdata_rep0	0.0
+Gold standard	genus	False positives	simdata_rep0	0.0
+Gold standard	genus	Completeness	simdata_rep0	1.0
+Gold standard	genus	Purity	simdata_rep0	1.0
+Gold standard	genus	F1 score	simdata_rep0	1.0
+Gold standard	genus	Jaccard index	simdata_rep0	1.0
+Gold standard	species	True positives	simdata_rep0	17.0
+Gold standard	species	False negatives	simdata_rep0	0.0
+Gold standard	species	False positives	simdata_rep0	0.0
+Gold standard	species	Completeness	simdata_rep0	1.0
+Gold standard	species	Purity	simdata_rep0	1.0
+Gold standard	species	F1 score	simdata_rep0	1.0
+Gold standard	species	Jaccard index	simdata_rep0	1.0
+Gold standard	superkingdom	L1 norm error	simdata_rep0	0.0
+Gold standard	phylum	L1 norm error	simdata_rep0	0.0
+Gold standard	class	L1 norm error	simdata_rep0	0.0
+Gold standard	order	L1 norm error	simdata_rep0	0.0
+Gold standard	family	L1 norm error	simdata_rep0	0.0
+Gold standard	genus	L1 norm error	simdata_rep0	0.0
+Gold standard	species	L1 norm error	simdata_rep0	0.0
+Gold standard	na	Weighted UniFrac error	simdata_rep0	0.0
+Gold standard	na	Unweighted UniFrac error	simdata_rep0	0.0
+Gold standard	na	Weighted UniFrac (CAMI)	simdata_rep0	0.0
+Gold standard	na	Unweighted UniFrac (CAMI)	simdata_rep0	0.0
+Gold standard	superkingdom	Sum of abundances	simdata_rep0	1.0
+Gold standard	phylum	Sum of abundances	simdata_rep0	1.0000000999999998
+Gold standard	class	Sum of abundances	simdata_rep0	1.0000000999999998
+Gold standard	order	Sum of abundances	simdata_rep0	1.0000002
+Gold standard	family	Sum of abundances	simdata_rep0	1.0000002
+Gold standard	genus	Sum of abundances	simdata_rep0	1.0000002000000001
+Gold standard	species	Sum of abundances	simdata_rep0	1.0000002000000001
+Gold standard	superkingdom	Taxon counts	simdata_rep0	1.0
+Gold standard	phylum	Taxon counts	simdata_rep0	8.0
+Gold standard	class	Taxon counts	simdata_rep0	8.0
+Gold standard	order	Taxon counts	simdata_rep0	10.0
+Gold standard	family	Taxon counts	simdata_rep0	10.0
+Gold standard	genus	Taxon counts	simdata_rep0	12.0
+Gold standard	species	Taxon counts	simdata_rep0	17.0
+abundance.profile	superkingdom	Bray-Curtis distance	simdata_rep0	0.005533956127547978
+abundance.profile	phylum	Bray-Curtis distance	simdata_rep0	0.007639594124283288
+abundance.profile	class	Bray-Curtis distance	simdata_rep0	0.007639594124283288
+abundance.profile	order	Bray-Curtis distance	simdata_rep0	0.01780228212812781
+abundance.profile	family	Bray-Curtis distance	simdata_rep0	0.02661684976336664
+abundance.profile	genus	Bray-Curtis distance	simdata_rep0	0.03534254227136424
+abundance.profile	species	Bray-Curtis distance	simdata_rep0	0.050006760163988424
+abundance.profile	superkingdom	Shannon diversity	simdata_rep0	0.01094619948706718
+abundance.profile	superkingdom	Shannon equitability	simdata_rep0	0.0
+abundance.profile	phylum	Shannon diversity	simdata_rep0	1.5085417205727443
+abundance.profile	phylum	Shannon equitability	simdata_rep0	0.7254552197481342
+abundance.profile	class	Shannon diversity	simdata_rep0	1.5085417205727443
+abundance.profile	class	Shannon equitability	simdata_rep0	0.7254552197481342
+abundance.profile	order	Shannon diversity	simdata_rep0	1.7801239704294416
+abundance.profile	order	Shannon equitability	simdata_rep0	0.7730980174612139
+abundance.profile	family	Shannon diversity	simdata_rep0	1.7432240892750885
+abundance.profile	family	Shannon equitability	simdata_rep0	0.7570726026929925
+abundance.profile	genus	Shannon diversity	simdata_rep0	1.9028060864054441
+abundance.profile	genus	Shannon equitability	simdata_rep0	0.7935317726302734
+abundance.profile	species	Shannon diversity	simdata_rep0	1.8521938547120298
+abundance.profile	species	Shannon equitability	simdata_rep0	0.7724248326118508
+abundance.profile	superkingdom	True positives	simdata_rep0	1.0
+abundance.profile	superkingdom	False negatives	simdata_rep0	0.0
+abundance.profile	superkingdom	False positives	simdata_rep0	0.0
+abundance.profile	superkingdom	Completeness	simdata_rep0	1.0
+abundance.profile	superkingdom	Purity	simdata_rep0	1.0
+abundance.profile	superkingdom	F1 score	simdata_rep0	1.0
+abundance.profile	superkingdom	Jaccard index	simdata_rep0	1.0
+abundance.profile	phylum	True positives	simdata_rep0	8.0
+abundance.profile	phylum	False negatives	simdata_rep0	0.0
+abundance.profile	phylum	False positives	simdata_rep0	0.0
+abundance.profile	phylum	Completeness	simdata_rep0	1.0
+abundance.profile	phylum	Purity	simdata_rep0	1.0
+abundance.profile	phylum	F1 score	simdata_rep0	1.0
+abundance.profile	phylum	Jaccard index	simdata_rep0	1.0
+abundance.profile	class	True positives	simdata_rep0	8.0
+abundance.profile	class	False negatives	simdata_rep0	0.0
+abundance.profile	class	False positives	simdata_rep0	0.0
+abundance.profile	class	Completeness	simdata_rep0	1.0
+abundance.profile	class	Purity	simdata_rep0	1.0
+abundance.profile	class	F1 score	simdata_rep0	1.0
+abundance.profile	class	Jaccard index	simdata_rep0	1.0
+abundance.profile	order	True positives	simdata_rep0	10.0
+abundance.profile	order	False negatives	simdata_rep0	0.0
+abundance.profile	order	False positives	simdata_rep0	0.0
+abundance.profile	order	Completeness	simdata_rep0	1.0
+abundance.profile	order	Purity	simdata_rep0	1.0
+abundance.profile	order	F1 score	simdata_rep0	1.0
+abundance.profile	order	Jaccard index	simdata_rep0	1.0
+abundance.profile	family	True positives	simdata_rep0	10.0
+abundance.profile	family	False negatives	simdata_rep0	0.0
+abundance.profile	family	False positives	simdata_rep0	0.0
+abundance.profile	family	Completeness	simdata_rep0	1.0
+abundance.profile	family	Purity	simdata_rep0	1.0
+abundance.profile	family	F1 score	simdata_rep0	1.0
+abundance.profile	family	Jaccard index	simdata_rep0	1.0
+abundance.profile	genus	True positives	simdata_rep0	11.0
+abundance.profile	genus	False negatives	simdata_rep0	1.0
+abundance.profile	genus	False positives	simdata_rep0	0.0
+abundance.profile	genus	Completeness	simdata_rep0	0.9166666666666666
+abundance.profile	genus	Purity	simdata_rep0	1.0
+abundance.profile	genus	F1 score	simdata_rep0	0.9565217391304348
+abundance.profile	genus	Jaccard index	simdata_rep0	0.9166666666666666
+abundance.profile	species	True positives	simdata_rep0	11.0
+abundance.profile	species	False negatives	simdata_rep0	6.0
+abundance.profile	species	False positives	simdata_rep0	0.0
+abundance.profile	species	Completeness	simdata_rep0	0.6470588235294118
+abundance.profile	species	Purity	simdata_rep0	1.0
+abundance.profile	species	F1 score	simdata_rep0	0.7857142857142858
+abundance.profile	species	Jaccard index	simdata_rep0	0.6470588235294118
+abundance.profile	superkingdom	L1 norm error	simdata_rep0	0.011007000000000034
+abundance.profile	phylum	L1 norm error	simdata_rep0	0.015195100000000003
+abundance.profile	class	L1 norm error	simdata_rep0	0.015195100000000003
+abundance.profile	order	L1 norm error	simdata_rep0	0.03512359999999999
+abundance.profile	family	L1 norm error	simdata_rep0	0.05206369999999999
+abundance.profile	genus	L1 norm error	simdata_rep0	0.06854890000000001
+abundance.profile	species	L1 norm error	simdata_rep0	0.0962015
+abundance.profile	na	Weighted UniFrac error	simdata_rep0	0.002381088900000003
+abundance.profile	na	Unweighted UniFrac error	simdata_rep0	0.20361272609158038
+abundance.profile	na	Weighted UniFrac (CAMI)	simdata_rep0	0.3103556290264952
+abundance.profile	na	Unweighted UniFrac (CAMI)	simdata_rep0	33.99999939999999
+abundance.profile	superkingdom	Sum of abundances	simdata_rep0	0.988993
+abundance.profile	phylum	Sum of abundances	simdata_rep0	0.9889930000000001
+abundance.profile	class	Sum of abundances	simdata_rep0	0.9889930000000001
+abundance.profile	order	Sum of abundances	simdata_rep0	0.9729828
+abundance.profile	family	Sum of abundances	simdata_rep0	0.9560427
+abundance.profile	genus	Sum of abundances	simdata_rep0	0.9395574999999999
+abundance.profile	species	Sum of abundances	simdata_rep0	0.9237697
+abundance.profile	superkingdom	Taxon counts	simdata_rep0	1.0
+abundance.profile	phylum	Taxon counts	simdata_rep0	8.0
+abundance.profile	class	Taxon counts	simdata_rep0	8.0
+abundance.profile	order	Taxon counts	simdata_rep0	10.0
+abundance.profile	family	Taxon counts	simdata_rep0	10.0
+abundance.profile	genus	Taxon counts	simdata_rep0	11.0
+abundance.profile	species	Taxon counts	simdata_rep0	11.0
+wf-16s.profile	superkingdom	Bray-Curtis distance	simdata_rep0	0.31226173427723447
+wf-16s.profile	phylum	Bray-Curtis distance	simdata_rep0	0.3122617794018619
+wf-16s.profile	class	Bray-Curtis distance	simdata_rep0	0.31226177940186195
+wf-16s.profile	order	Bray-Curtis distance	simdata_rep0	0.3122618245264836
+wf-16s.profile	family	Bray-Curtis distance	simdata_rep0	0.3122618245264835
+wf-16s.profile	genus	Bray-Curtis distance	simdata_rep0	0.31226182452648354
+wf-16s.profile	species	Bray-Curtis distance	simdata_rep0	0.32381882337101414
+wf-16s.profile	superkingdom	Shannon diversity	simdata_rep0	0.33861162443454773
+wf-16s.profile	superkingdom	Shannon equitability	simdata_rep0	0.0
+wf-16s.profile	phylum	Shannon diversity	simdata_rep0	1.1362813894681865
+wf-16s.profile	phylum	Shannon equitability	simdata_rep0	0.5464358418800579
+wf-16s.profile	class	Shannon diversity	simdata_rep0	1.1362813894681865
+wf-16s.profile	class	Shannon equitability	simdata_rep0	0.5464358418800579
+wf-16s.profile	order	Shannon diversity	simdata_rep0	1.3066745677003022
+wf-16s.profile	order	Shannon equitability	simdata_rep0	0.5674815543955583
+wf-16s.profile	family	Shannon diversity	simdata_rep0	1.3066745677003022
+wf-16s.profile	family	Shannon equitability	simdata_rep0	0.5674815543955583
+wf-16s.profile	genus	Shannon diversity	simdata_rep0	1.4173363105641945
+wf-16s.profile	genus	Shannon equitability	simdata_rep0	0.5703780907363721
+wf-16s.profile	species	Shannon diversity	simdata_rep0	1.5040975185688705
+wf-16s.profile	species	Shannon equitability	simdata_rep0	0.46727416663563187
+wf-16s.profile	superkingdom	True positives	simdata_rep0	1.0
+wf-16s.profile	superkingdom	False negatives	simdata_rep0	0.0
+wf-16s.profile	superkingdom	False positives	simdata_rep0	0.0
+wf-16s.profile	superkingdom	Completeness	simdata_rep0	1.0
+wf-16s.profile	superkingdom	Purity	simdata_rep0	1.0
+wf-16s.profile	superkingdom	F1 score	simdata_rep0	1.0
+wf-16s.profile	superkingdom	Jaccard index	simdata_rep0	1.0
+wf-16s.profile	phylum	True positives	simdata_rep0	8.0
+wf-16s.profile	phylum	False negatives	simdata_rep0	0.0
+wf-16s.profile	phylum	False positives	simdata_rep0	0.0
+wf-16s.profile	phylum	Completeness	simdata_rep0	1.0
+wf-16s.profile	phylum	Purity	simdata_rep0	1.0
+wf-16s.profile	phylum	F1 score	simdata_rep0	1.0
+wf-16s.profile	phylum	Jaccard index	simdata_rep0	1.0
+wf-16s.profile	class	True positives	simdata_rep0	8.0
+wf-16s.profile	class	False negatives	simdata_rep0	0.0
+wf-16s.profile	class	False positives	simdata_rep0	0.0
+wf-16s.profile	class	Completeness	simdata_rep0	1.0
+wf-16s.profile	class	Purity	simdata_rep0	1.0
+wf-16s.profile	class	F1 score	simdata_rep0	1.0
+wf-16s.profile	class	Jaccard index	simdata_rep0	1.0
+wf-16s.profile	order	True positives	simdata_rep0	10.0
+wf-16s.profile	order	False negatives	simdata_rep0	0.0
+wf-16s.profile	order	False positives	simdata_rep0	0.0
+wf-16s.profile	order	Completeness	simdata_rep0	1.0
+wf-16s.profile	order	Purity	simdata_rep0	1.0
+wf-16s.profile	order	F1 score	simdata_rep0	1.0
+wf-16s.profile	order	Jaccard index	simdata_rep0	1.0
+wf-16s.profile	family	True positives	simdata_rep0	10.0
+wf-16s.profile	family	False negatives	simdata_rep0	0.0
+wf-16s.profile	family	False positives	simdata_rep0	0.0
+wf-16s.profile	family	Completeness	simdata_rep0	1.0
+wf-16s.profile	family	Purity	simdata_rep0	1.0
+wf-16s.profile	family	F1 score	simdata_rep0	1.0
+wf-16s.profile	family	Jaccard index	simdata_rep0	1.0
+wf-16s.profile	genus	True positives	simdata_rep0	12.0
+wf-16s.profile	genus	False negatives	simdata_rep0	0.0
+wf-16s.profile	genus	False positives	simdata_rep0	0.0
+wf-16s.profile	genus	Completeness	simdata_rep0	1.0
+wf-16s.profile	genus	Purity	simdata_rep0	1.0
+wf-16s.profile	genus	F1 score	simdata_rep0	1.0
+wf-16s.profile	genus	Jaccard index	simdata_rep0	1.0
+wf-16s.profile	species	True positives	simdata_rep0	17.0
+wf-16s.profile	species	False negatives	simdata_rep0	0.0
+wf-16s.profile	species	False positives	simdata_rep0	8.0
+wf-16s.profile	species	Completeness	simdata_rep0	1.0
+wf-16s.profile	species	Purity	simdata_rep0	0.68
+wf-16s.profile	species	F1 score	simdata_rep0	0.8095238095238095
+wf-16s.profile	species	Jaccard index	simdata_rep0	0.68
+wf-16s.profile	superkingdom	L1 norm error	simdata_rep0	0.4759138
+wf-16s.profile	phylum	L1 norm error	simdata_rep0	0.47591389999999995
+wf-16s.profile	class	L1 norm error	simdata_rep0	0.47591389999999995
+wf-16s.profile	order	L1 norm error	simdata_rep0	0.475914
+wf-16s.profile	family	L1 norm error	simdata_rep0	0.475914
+wf-16s.profile	genus	L1 norm error	simdata_rep0	0.475914
+wf-16s.profile	species	L1 norm error	simdata_rep0	0.49352780000000007
+wf-16s.profile	na	Weighted UniFrac error	simdata_rep0	0.043277254583333334
+wf-16s.profile	na	Unweighted UniFrac error	simdata_rep0	0.6528502899788906
+wf-16s.profile	na	Weighted UniFrac (CAMI)	simdata_rep0	0.12675539851444376
+wf-16s.profile	na	Unweighted UniFrac (CAMI)	simdata_rep0	79.000001
+wf-16s.profile	superkingdom	Sum of abundances	simdata_rep0	0.5240862
+wf-16s.profile	phylum	Sum of abundances	simdata_rep0	0.5240862
+wf-16s.profile	class	Sum of abundances	simdata_rep0	0.5240862
+wf-16s.profile	order	Sum of abundances	simdata_rep0	0.5240862000000001
+wf-16s.profile	family	Sum of abundances	simdata_rep0	0.5240862000000001
+wf-16s.profile	genus	Sum of abundances	simdata_rep0	0.5240862000000002
+wf-16s.profile	species	Sum of abundances	simdata_rep0	0.5240860000000002
+wf-16s.profile	superkingdom	Taxon counts	simdata_rep0	1.0
+wf-16s.profile	phylum	Taxon counts	simdata_rep0	8.0
+wf-16s.profile	class	Taxon counts	simdata_rep0	8.0
+wf-16s.profile	order	Taxon counts	simdata_rep0	10.0
+wf-16s.profile	family	Taxon counts	simdata_rep0	10.0
+wf-16s.profile	genus	Taxon counts	simdata_rep0	12.0
+wf-16s.profile	species	Taxon counts	simdata_rep0	25.0

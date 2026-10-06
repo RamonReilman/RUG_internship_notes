@@ -1,0 +1,3 @@
+tool	sample	Weighted UniFrac error	Unweighted UniFrac error
+abundance.profile	simdata_rep0	0.002381088900000003	0.20361272609158038
+wf-16s.profile	simdata_rep0	0.043277254583333334	0.6528502899788906

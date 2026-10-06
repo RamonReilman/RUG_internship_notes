@@ -1,0 +1,207 @@
+taxid	rank	pct	classification	pct_gs	sample	tool
+10	class	33.853	TP	33.853	simdata_rep0	Gold standard
+11	class	35.03727	TP	35.03727	simdata_rep0	Gold standard
+12	class	16.2949	TP	16.2949	simdata_rep0	Gold standard
+13	class	6.88761	TP	6.88761	simdata_rep0	Gold standard
+14	class	2.4705	TP	2.4705	simdata_rep0	Gold standard
+15	class	2.89222	TP	2.89222	simdata_rep0	Gold standard
+16	class	1.67051	TP	1.67051	simdata_rep0	Gold standard
+17	class	0.894	TP	0.894	simdata_rep0	Gold standard
+18	order	33.853	TP	33.853	simdata_rep0	Gold standard
+19	order	22.23149	TP	22.23149	simdata_rep0	Gold standard
+2	phylum	33.853	TP	33.853	simdata_rep0	Gold standard
+20	order	16.2949	TP	16.2949	simdata_rep0	Gold standard
+21	order	6.88761	TP	6.88761	simdata_rep0	Gold standard
+22	order	6.81356	TP	6.81356	simdata_rep0	Gold standard
+23	order	5.99223	TP	5.99223	simdata_rep0	Gold standard
+24	order	2.4705	TP	2.4705	simdata_rep0	Gold standard
+25	order	2.89222	TP	2.89222	simdata_rep0	Gold standard
+26	order	1.67051	TP	1.67051	simdata_rep0	Gold standard
+27	order	0.894	TP	0.894	simdata_rep0	Gold standard
+28	family	33.853	TP	33.853	simdata_rep0	Gold standard
+29	family	22.23149	TP	22.23149	simdata_rep0	Gold standard
+3	phylum	35.03727	TP	35.03727	simdata_rep0	Gold standard
+30	family	16.2949	TP	16.2949	simdata_rep0	Gold standard
+31	family	6.88761	TP	6.88761	simdata_rep0	Gold standard
+32	family	6.81356	TP	6.81356	simdata_rep0	Gold standard
+33	family	5.99223	TP	5.99223	simdata_rep0	Gold standard
+34	family	2.4705	TP	2.4705	simdata_rep0	Gold standard
+35	family	2.89222	TP	2.89222	simdata_rep0	Gold standard
+36	family	1.67051	TP	1.67051	simdata_rep0	Gold standard
+37	family	0.894	TP	0.894	simdata_rep0	Gold standard
+38	genus	24.8257	TP	24.8257	simdata_rep0	Gold standard
+39	genus	22.23149	TP	22.23149	simdata_rep0	Gold standard
+4	phylum	16.2949	TP	16.2949	simdata_rep0	Gold standard
+40	genus	16.2949	TP	16.2949	simdata_rep0	Gold standard
+41	genus	9.0273	TP	9.0273	simdata_rep0	Gold standard
+42	genus	6.5464	TP	6.5464	simdata_rep0	Gold standard
+43	genus	6.81356	TP	6.81356	simdata_rep0	Gold standard
+44	genus	5.99223	TP	5.99223	simdata_rep0	Gold standard
+45	genus	2.4705	TP	2.4705	simdata_rep0	Gold standard
+46	genus	2.89222	TP	2.89222	simdata_rep0	Gold standard
+47	genus	1.67051	TP	1.67051	simdata_rep0	Gold standard
+48	genus	0.894	TP	0.894	simdata_rep0	Gold standard
+49	genus	0.34121	TP	0.34121	simdata_rep0	Gold standard
+5	phylum	6.88761	TP	6.88761	simdata_rep0	Gold standard
+50	species	24.8257	TP	24.8257	simdata_rep0	Gold standard
+51	species	22.23149	TP	22.23149	simdata_rep0	Gold standard
+52	species	16.2949	TP	16.2949	simdata_rep0	Gold standard
+53	species	9.0273	TP	9.0273	simdata_rep0	Gold standard
+54	species	6.81356	TP	6.81356	simdata_rep0	Gold standard
+55	species	5.99223	TP	5.99223	simdata_rep0	Gold standard
+56	species	2.4705	TP	2.4705	simdata_rep0	Gold standard
+57	species	2.25504	TP	2.25504	simdata_rep0	Gold standard
+58	species	1.65728	TP	1.65728	simdata_rep0	Gold standard
+59	species	1.67051	TP	1.67051	simdata_rep0	Gold standard
+6	phylum	2.4705	TP	2.4705	simdata_rep0	Gold standard
+60	species	1.18302	TP	1.18302	simdata_rep0	Gold standard
+61	species	1.52178	TP	1.52178	simdata_rep0	Gold standard
+62	species	1.31072	TP	1.31072	simdata_rep0	Gold standard
+63	species	0.894	TP	0.894	simdata_rep0	Gold standard
+64	species	0.87361	TP	0.87361	simdata_rep0	Gold standard
+65	species	0.63717	TP	0.63717	simdata_rep0	Gold standard
+66	species	0.34121	TP	0.34121	simdata_rep0	Gold standard
+67	superkingdom	100.0	TP	100.0	simdata_rep0	Gold standard
+7	phylum	2.89222	TP	2.89222	simdata_rep0	Gold standard
+8	phylum	1.67051	TP	1.67051	simdata_rep0	Gold standard
+9	phylum	0.894	TP	0.894	simdata_rep0	Gold standard
+10	class	34.0358	TP	33.853	simdata_rep0	abundance.profile
+11	class	34.16214	TP	35.03727	simdata_rep0	abundance.profile
+12	class	16.3215	TP	16.2949	simdata_rep0	abundance.profile
+13	class	6.64261	TP	6.88761	simdata_rep0	abundance.profile
+14	class	2.41972	TP	2.4705	simdata_rep0	abundance.profile
+15	class	2.84828	TP	2.89222	simdata_rep0	abundance.profile
+16	class	1.60001	TP	1.67051	simdata_rep0	abundance.profile
+17	class	0.86924	TP	0.894	simdata_rep0	abundance.profile
+18	order	34.0358	TP	33.853	simdata_rep0	abundance.profile
+19	order	22.4274	TP	22.23149	simdata_rep0	abundance.profile
+2	phylum	34.0358	TP	33.853	simdata_rep0	abundance.profile
+20	order	16.3215	TP	16.2949	simdata_rep0	abundance.profile
+21	order	5.04159	TP	6.88761	simdata_rep0	abundance.profile
+22	order	5.75417	TP	6.81356	simdata_rep0	abundance.profile
+23	order	5.98057	TP	5.99223	simdata_rep0	abundance.profile
+24	order	2.41972	TP	2.4705	simdata_rep0	abundance.profile
+25	order	2.84828	TP	2.89222	simdata_rep0	abundance.profile
+26	order	1.60001	TP	1.67051	simdata_rep0	abundance.profile
+27	order	0.86924	TP	0.894	simdata_rep0	abundance.profile
+28	family	34.0358	TP	33.853	simdata_rep0	abundance.profile
+29	family	22.4274	TP	22.23149	simdata_rep0	abundance.profile
+3	phylum	34.16214	TP	35.03727	simdata_rep0	abundance.profile
+30	family	16.3215	TP	16.2949	simdata_rep0	abundance.profile
+31	family	3.34758	TP	6.88761	simdata_rep0	abundance.profile
+32	family	5.75417	TP	6.81356	simdata_rep0	abundance.profile
+33	family	5.98057	TP	5.99223	simdata_rep0	abundance.profile
+34	family	2.41972	TP	2.4705	simdata_rep0	abundance.profile
+35	family	2.84828	TP	2.89222	simdata_rep0	abundance.profile
+36	family	1.60001	TP	1.67051	simdata_rep0	abundance.profile
+37	family	0.86924	TP	0.894	simdata_rep0	abundance.profile
+38	genus	24.93708	TP	24.8257	simdata_rep0	abundance.profile
+39	genus	22.4274	TP	22.23149	simdata_rep0	abundance.profile
+4	phylum	16.3215	TP	16.2949	simdata_rep0	abundance.profile
+40	genus	16.3215	TP	16.2949	simdata_rep0	abundance.profile
+41	genus	9.09872	TP	9.0273	simdata_rep0	abundance.profile
+42	genus	2.35099	TP	6.5464	simdata_rep0	abundance.profile
+43	genus	5.10224	TP	6.81356	simdata_rep0	abundance.profile
+44	genus	5.98057	TP	5.99223	simdata_rep0	abundance.profile
+45	genus	2.41972	TP	2.4705	simdata_rep0	abundance.profile
+46	genus	2.84828	TP	2.89222	simdata_rep0	abundance.profile
+47	genus	1.60001	TP	1.67051	simdata_rep0	abundance.profile
+48	genus	0.86924	TP	0.894	simdata_rep0	abundance.profile
+49	genus		FN	0.34121	simdata_rep0	abundance.profile
+5	phylum	6.64261	TP	6.88761	simdata_rep0	abundance.profile
+50	species	24.93708	TP	24.8257	simdata_rep0	abundance.profile
+51	species	22.4274	TP	22.23149	simdata_rep0	abundance.profile
+52	species	16.3215	TP	16.2949	simdata_rep0	abundance.profile
+53	species	9.09872	TP	9.0273	simdata_rep0	abundance.profile
+54	species	5.10224	TP	6.81356	simdata_rep0	abundance.profile
+55	species	5.98057	TP	5.99223	simdata_rep0	abundance.profile
+56	species	2.41972	TP	2.4705	simdata_rep0	abundance.profile
+57	species	2.84828	TP	2.25504	simdata_rep0	abundance.profile
+58	species		FN	1.65728	simdata_rep0	abundance.profile
+59	species	1.60001	TP	1.67051	simdata_rep0	abundance.profile
+6	phylum	2.41972	TP	2.4705	simdata_rep0	abundance.profile
+60	species		FN	1.18302	simdata_rep0	abundance.profile
+61	species		FN	1.52178	simdata_rep0	abundance.profile
+62	species	0.77221	TP	1.31072	simdata_rep0	abundance.profile
+63	species	0.86924	TP	0.894	simdata_rep0	abundance.profile
+64	species		FN	0.87361	simdata_rep0	abundance.profile
+65	species		FN	0.63717	simdata_rep0	abundance.profile
+66	species		FN	0.34121	simdata_rep0	abundance.profile
+67	superkingdom	98.8993	TP	100.0	simdata_rep0	abundance.profile
+7	phylum	2.84828	TP	2.89222	simdata_rep0	abundance.profile
+8	phylum	1.60001	TP	1.67051	simdata_rep0	abundance.profile
+9	phylum	0.86924	TP	0.894	simdata_rep0	abundance.profile
+10	class	17.68996	TP	33.853	simdata_rep0	wf-16s.profile
+1011	species	0.00701	FP		simdata_rep0	wf-16s.profile
+1043	species	0.001	FP		simdata_rep0	wf-16s.profile
+11	class	18.56965	TP	35.03727	simdata_rep0	wf-16s.profile
+12	class	8.2268	TP	16.2949	simdata_rep0	wf-16s.profile
+124	species	0.00601	FP		simdata_rep0	wf-16s.profile
+1269	species	0.001	FP		simdata_rep0	wf-16s.profile
+13	class	3.63999	TP	6.88761	simdata_rep0	wf-16s.profile
+14	class	1.36662	TP	2.4705	simdata_rep0	wf-16s.profile
+15	class	1.52393	TP	2.89222	simdata_rep0	wf-16s.profile
+16	class	0.86867	TP	1.67051	simdata_rep0	wf-16s.profile
+17	class	0.523	TP	0.894	simdata_rep0	wf-16s.profile
+18	order	17.68996	TP	33.853	simdata_rep0	wf-16s.profile
+19	order	11.64235	TP	22.23149	simdata_rep0	wf-16s.profile
+2	phylum	17.68996	TP	33.853	simdata_rep0	wf-16s.profile
+20	order	8.2268	TP	16.2949	simdata_rep0	wf-16s.profile
+21	order	3.63999	TP	6.88761	simdata_rep0	wf-16s.profile
+22	order	3.77825	TP	6.81356	simdata_rep0	wf-16s.profile
+23	order	3.14905	TP	5.99223	simdata_rep0	wf-16s.profile
+24	order	1.36662	TP	2.4705	simdata_rep0	wf-16s.profile
+25	order	1.52393	TP	2.89222	simdata_rep0	wf-16s.profile
+26	order	0.86867	TP	1.67051	simdata_rep0	wf-16s.profile
+27	order	0.523	TP	0.894	simdata_rep0	wf-16s.profile
+28	family	17.68996	TP	33.853	simdata_rep0	wf-16s.profile
+29	family	11.64235	TP	22.23149	simdata_rep0	wf-16s.profile
+3	phylum	18.56965	TP	35.03727	simdata_rep0	wf-16s.profile
+30	family	8.2268	TP	16.2949	simdata_rep0	wf-16s.profile
+31	family	3.63999	TP	6.88761	simdata_rep0	wf-16s.profile
+32	family	3.77825	TP	6.81356	simdata_rep0	wf-16s.profile
+33	family	3.14905	TP	5.99223	simdata_rep0	wf-16s.profile
+33976	species	0.45087	FP		simdata_rep0	wf-16s.profile
+33977	species	0.35568	FP		simdata_rep0	wf-16s.profile
+33978	species	0.03206	FP		simdata_rep0	wf-16s.profile
+34	family	1.36662	TP	2.4705	simdata_rep0	wf-16s.profile
+35	family	1.52393	TP	2.89222	simdata_rep0	wf-16s.profile
+36	family	0.86867	TP	1.67051	simdata_rep0	wf-16s.profile
+37	family	0.523	TP	0.894	simdata_rep0	wf-16s.profile
+38	genus	12.88574	TP	24.8257	simdata_rep0	wf-16s.profile
+39	genus	11.64235	TP	22.23149	simdata_rep0	wf-16s.profile
+4	phylum	8.2268	TP	16.2949	simdata_rep0	wf-16s.profile
+40	genus	8.2268	TP	16.2949	simdata_rep0	wf-16s.profile
+41	genus	4.80422	TP	9.0273	simdata_rep0	wf-16s.profile
+42	genus	3.45864	TP	6.5464	simdata_rep0	wf-16s.profile
+43	genus	3.77825	TP	6.81356	simdata_rep0	wf-16s.profile
+44	genus	3.14905	TP	5.99223	simdata_rep0	wf-16s.profile
+45	genus	1.36662	TP	2.4705	simdata_rep0	wf-16s.profile
+46	genus	1.52393	TP	2.89222	simdata_rep0	wf-16s.profile
+47	genus	0.86867	TP	1.67051	simdata_rep0	wf-16s.profile
+48	genus	0.523	TP	0.894	simdata_rep0	wf-16s.profile
+49	genus	0.18135	TP	0.34121	simdata_rep0	wf-16s.profile
+5	phylum	3.63999	TP	6.88761	simdata_rep0	wf-16s.profile
+50	species	12.88574	TP	24.8257	simdata_rep0	wf-16s.profile
+51	species	11.64135	TP	22.23149	simdata_rep0	wf-16s.profile
+52	species	7.8651	TP	16.2949	simdata_rep0	wf-16s.profile
+53	species	4.80422	TP	9.0273	simdata_rep0	wf-16s.profile
+54	species	3.77825	TP	6.81356	simdata_rep0	wf-16s.profile
+55	species	3.14905	TP	5.99223	simdata_rep0	wf-16s.profile
+56	species	1.36662	TP	2.4705	simdata_rep0	wf-16s.profile
+57	species	1.23237	TP	2.25504	simdata_rep0	wf-16s.profile
+572	species	0.02705	FP		simdata_rep0	wf-16s.profile
+58	species	0.60917	TP	1.65728	simdata_rep0	wf-16s.profile
+59	species	0.86867	TP	1.67051	simdata_rep0	wf-16s.profile
+6	phylum	1.36662	TP	2.4705	simdata_rep0	wf-16s.profile
+60	species	0.63322	TP	1.18302	simdata_rep0	wf-16s.profile
+61	species	0.68932	TP	1.52178	simdata_rep0	wf-16s.profile
+62	species	0.59614	TP	1.31072	simdata_rep0	wf-16s.profile
+63	species	0.523	TP	0.894	simdata_rep0	wf-16s.profile
+64	species	0.44485	TP	0.87361	simdata_rep0	wf-16s.profile
+65	species	0.2595	TP	0.63717	simdata_rep0	wf-16s.profile
+66	species	0.18135	TP	0.34121	simdata_rep0	wf-16s.profile
+67	superkingdom	52.40862	TP	100.0	simdata_rep0	wf-16s.profile
+7	phylum	1.52393	TP	2.89222	simdata_rep0	wf-16s.profile
+8	phylum	0.86867	TP	1.67051	simdata_rep0	wf-16s.profile
+9	phylum	0.523	TP	0.894	simdata_rep0	wf-16s.profile
