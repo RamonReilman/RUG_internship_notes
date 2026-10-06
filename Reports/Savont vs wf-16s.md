@@ -2,7 +2,7 @@
 
 Ramon Reilman
 
-This file will contain an overview of what I've done to compare these 2 workflows, and the results of that. Since the code takes up a lot of space, i moved all of these code blocks to the end of the report
+This file will contain an overview of what I've done to compare these 2 workflows, and the results of that. Since the code takes up a lot of space, I moved all of these code blocks to the end of the report
 
 ## Methods / tools / code
 
@@ -12,16 +12,21 @@ I compared these 2 tools using 3 different types of data.
 2. A Gutmock dataset from zymo
 3. Simulated data using nanosim
 
+### Scope and comparison
+Quantitative comparison via OPAL is only possible for the simulated dataset, because OPAL requires ground-truth profiles in a taxonomy shared by both tools. Potato and GutMock data are presented as qualitative observations only, they reveal behavioral differences that complement, but do not replace, the benchmark.
 ### Potato data
-I ran the wf-16s on the potato data (From Thomas Vogel), using less processes and a small queue size due to it crashing otherwise. Running it with a lower max_len value caused the results to be empty, so this was a necessary step. It was run using the Silva database, the same one as Savont. (Code Block 1)
+I ran the wf-16s on the potato data (From Thomas Vogel), using less processes and a small queue size due to it crashing otherwise. Running it with a lower max_len value caused the results to be empty, so this was a necessary step. It was run using the Silva database, the same one as Savont. (Shaw et al., n.d.). Classifications were generated via minimap2 alignment (Li, 2018)
 
-These same values (like max length) were kept for Savont, to keep it equal. (Code Block 2)
+(Code Block 1)
+
+These same values (like max length) were kept for Savont, to keep it equal.
+(Code Block 2)
 
 ### GutMock
 
-For the gutmock i had to first turn the bam files into fasta files: (Code Block 3)
+For the gutmock I had to first turn the bam files into fasta files: (Code Block 3)
 
-And i had to remove the adapters that were on the data: (Code Block 4)
+And I had to remove the adapters that were on the data: (Code Block 4)
 
 After this I was able to use both wf-16s and Savont on the data. (Code Block 5)
 
@@ -30,19 +35,19 @@ After this I was able to use both wf-16s and Savont on the data. (Code Block 5)
 While both Savont and wf-16s ran and on the GutMock and potato data, there was no accurate way to compare these 2 tools for the following reasons:
 
 1. We don't know what the exact microbiome is of real sequenced data (at least not in this case). This causes real data, like the potato dataset, to be inherently useless for comparing the 2 tools. So I read about the mock datasets (like gutmock), this however came with different issues.
-2. Most, if not all, mock datasets that I found (like the gutmock dataset) have their ground truth values using NCBI tax ID's or NCBI naming conventions. Savont, at this moment, does not support an NCBI reference database. Since both tools need the same reference database, I could not use the NCBI for wf-16s, and another for Savont. This meant I had to generate a fake mock dataset using NanoSim, using a database that both
+2. Most, if not all, mock datasets that I found (like the gutmock dataset) have their ground truth values using NCBI tax ID's or NCBI naming conventions, whereas Gereengenes2 (McDonald et al., 2024) uses GTDB-based taxonomy (Parks et al., 2018, 2020). Savont, at this moment, does not support an NCBI reference database. Since both tools need the same reference database, I could not use the NCBI for wf-16s, and another for Savont. This meant I had to generate a fake mock dataset using NanoSim (Yang et al., 2017), using a database that both
 
-3. OPAL (the tools used to compare Savont and wf-16s) requires the input data to have two important things:
-	- All input files need to have the CAMI Profiling output (version 0.9.3) https://github.com/bioboxes/rfc/blob/60263f34c57bc4137deeceec4c68a7f9f810f6a5/data-format/profiling.mkd
-	- These input files need to contain TAXids. The issue with this is that I could not find any valid TAXids for the greengenes2 db (the only reference db that Savont and wf-16s share). So i had to generate my own TAXid database for greengenes2
+3. OPAL (Meyer et al., 2019), the tools used to compare Savont and wf-16s, requires the input data to have two important things:
+	- All input files need to have the CAMI Profiling output (Sczyrba et al., 2017) (version 0.9.3) https://github.com/bioboxes/rfc/blob/60263f34c57bc4137deeceec4c68a7f9f810f6a5/data-format/profiling.mkd
+	- These input files need to contain TAXids. The issue with this is that I could not find any valid TAXids for the greengenes2 db (the only reference db that Savont and wf-16s share). So I had to generate my own TAXid database for greengenes2
 	
 4. The Savont greengenes2 db and wf-16s are not the same, the wf-16s version is a plus version that contains more species than the Savont version. To fix this I updated my own tool, that is able to generate a custom db for wf-16s, that is based on the Savont db. Using my own TAXids that were defined in the third point.
 
 ### Generating Simulated data
 
-One of the first steps i had to do was split the Savont database. (Code Block 6)
+One of the first steps I had to do was split the Savont database. (Code Block 6)
 
-I had made the choice to make my simulated dataset comparable to my gutmock dataset, planning to use the following species:
+I had made the choice to make my simulated dataset comparable to my gutmock dataset, planning to use the following species (named according to GTDB taxonomy, which Greengenes2 uses; Parks et al., 2018, 2020):
 
 Bacteroides_H_857956 fragilis
 Faecalibacterium prausnitzii
@@ -66,15 +71,15 @@ The TAXids for these species were already in my reference db at this point, so i
 
 This moves all of the files that contain sequences belonging to species in the species list to a different folder, that will contain the custom set of species.
 
-The headers in these files are duplicated, this is something that NanoSim does not want, so i have to change these. The command below does the following:
+The headers in these files are duplicated, this is something that NanoSim does not want, so I have to change these. The command below does the following:
 
 Loops through all files, replaces their name with an ID (from my own taxid db) (Code Block 8)
 
 This caused headers in the training sets to look like this: "\>58_c021" with 58 being the species taxID and the c021, the sequence id.
 
-After training the data on the gutmock replicate 1, it revealed to me that the sequences my model had been trained with were too long, so i made the input file for this contain shorter sequences: (Code Block 9)
+After training the data on the gutmock replicate 1, it revealed to me that the sequences my model had been trained with were too long, so I made the input file for this contain shorter sequences: (Code Block 9)
 
-Running NanoSim without this step caused it to create new abundances with very high deviations from my expected abundances, in some cases even 2 or 3 orders of magnitude. Investigating this issue led met to NanoSim pull request #232 (A fix for abundance deviation in metagenome mode).
+Running NanoSim without this step caused it to create new abundances with very high deviations from my expected abundances, in some cases even 2 or 3 orders of magnitude. Investigating this issue led met to NanoSim pull request #232, a fix for abundance deviation in metagenome mode (Yang et al., 2021).
 
 When a drawn read length exceeds the chosen reference sequence, NanoSim will fall back to a randomly selected sequence from the entire reference pool, if this happens enough times, the eventual true abundances will deviate from the input abundances. I ended up fixing this issue by limiting the length of sequences in the rep1 data, as seen above.
 
@@ -119,82 +124,86 @@ And can then be used as in input for OPAL: (Code Block 20)
 ### Potato-data
 
 #### WF-16s
-
+Running a taxonomic profile classification with the EPI2ME 16s workflow resulted in the following genera being found in the barcodes. 
 ![help](../Resources/Compared/Potato/NextFlow/wf-16s.png)
 Figure 1, the relative abundances of genera in the different potato samples generated by the wf-16s workflow.
+Barcodes 4 and 5 being completely unknown is very much note worthy, as Savont (below) does find genera in these datasets.
 
 #### Savont
+Running a taxonomic profile classification with the Savont resulted in the following genera being found in the barcodes. 
 ![](Resources/Compared/Potato/Savont/abundance_plot.png)
-
-
 Figure 2, relative abundance of genera in the potato data, generated by Savont.
-
+The amount of Unknown or unclassified values is very low, especially compared to that found in the wf-16s results. Savont and wf-16s also find different genera, but since the ground truth of this is unknown, I do not know what tool is more correct.
 ### GutMock data
 
 #### WF-16s
+Running a taxonomic profile classification with the EPI2ME 16s workflow resulted in the following genera being found in the barcodes. 
 ![](Resources/Compared/GutMock_SUP/NextFlow/wf-gutmock.png)
 Figure 3, relative abundance of genera in replicate 2 of the gutmock dataset, generated by the wf-16s workflow
+I've left out the other 3 images for the other replicates, as they were all more or less the same. There is a pretty low percentage that is not defined.
 #### Savont
 ![](Resources/Compared/GutMock_SUP/Savont/abundance_plot.png)
-Figure 4, relative abundance of genera in replicate 2 of the gutmock dataset, generated by the wf-16s workflow
+Figure 4, relative abundance of genera in replicate 2 of the gutmock dataset, generated by Savont
+
+The 4 replicates within this dataset are more or less completely the same. And we can even note that both wf-16s and Savont find a comparable composition of genera in the data.
 ### Generated Data
 
 Table 1, Important metrics for every taxonomic rank (if available), between Savont and wf-16s.
 
-| Metric | Rank | Savont | wf-16s |
-|---|---|---|---|
-| Detection (F1-score) | Phylum | 1.000 | 1.000 |
-| Detection (F1-score) | Class | 1.000 | 1.000 |
-| Detection (F1-score) | Order | 1.000 | 1.000 |
-| Detection (F1-score) | Family | 1.000 | 1.000 |
-| Detection (F1-score) | Genus | 0.957 | 1.000 |
-| Detection (F1-score) | Species | 0.786 | 0.850 |
-| Purity | Genus | 1.000 | 1.000 |
-| Purity | Species | 1.000 | 0.739 |
-| Completeness | Genus | 0.917 | 1.000 |
-| Completeness | Species | 0.647 | 1.000 |
-| Abundance accuracy (Bray-Curtis) | Phylum | 0.008 | 0.788 |
-| Abundance accuracy (Bray-Curtis) | Class | 0.008 | 0.788 |
-| Abundance accuracy (Bray-Curtis) | Order | 0.018 | 0.788 |
-| Abundance accuracy (Bray-Curtis) | Family | 0.027 | 0.788 |
-| Abundance accuracy (Bray-Curtis) | Genus | 0.035 | 0.788 |
-| Abundance accuracy (Bray-Curtis) | Species | 0.050 | 0.791 |
-| Abundance accuracy (L1) | Phylum | 0.015 | 0.882 |
-| Abundance accuracy (L1) | Class | 0.015 | 0.882 |
-| Abundance accuracy (L1) | Order | 0.035 | 0.882 |
-| Abundance accuracy (L1) | Family | 0.052 | 0.882 |
-| Abundance accuracy (L1) | Genus | 0.069 | 0.882 |
-| Abundance accuracy (L1) | Species | 0.096 | 0.884 |
-| Sum of abundance | Phylum | 0.989 | 0.118 |
-| Sum of abundance | Species | 0.924 | 0.118 |
-| Other | Weighted UniFrac error | 0.0024 | 0.0800 |
-| Other | Unweighted UniFrac error | 0.204 | 0.538 |
-| Other | Weighted UniFrac (CAMI) | 0.310 | 0.799 |
-| Other | Unweighted UniFrac (CAMI) | 34.0 | 64.00 |
+| Metric                           | Rank                      | Savont | wf-16s |
+| -------------------------------- | ------------------------- | ------ | ------ |
+| Detection (F1-score)             | Phylum                    | 1.000  | 1.000  |
+| Detection (F1-score)             | Class                     | 1.000  | 1.000  |
+| Detection (F1-score)             | Order                     | 1.000  | 1.000  |
+| Detection (F1-score)             | Family                    | 1.000  | 1.000  |
+| Detection (F1-score)             | Genus                     | 0.957  | 1.000  |
+| Detection (F1-score)             | Species                   | 0.786  | 0.850  |
+| Purity                           | Genus                     | 1.000  | 1.000  |
+| Purity                           | Species                   | 1.000  | 0.739  |
+| Completeness                     | Genus                     | 0.917  | 1.000  |
+| Completeness                     | Species                   | 0.647  | 1.000  |
+| Abundance accuracy (Bray-Curtis) | Phylum                    | 0.008  | 0.788  |
+| Abundance accuracy (Bray-Curtis) | Class                     | 0.008  | 0.788  |
+| Abundance accuracy (Bray-Curtis) | Order                     | 0.018  | 0.788  |
+| Abundance accuracy (Bray-Curtis) | Family                    | 0.027  | 0.788  |
+| Abundance accuracy (Bray-Curtis) | Genus                     | 0.035  | 0.788  |
+| Abundance accuracy (Bray-Curtis) | Species                   | 0.050  | 0.791  |
+| Abundance accuracy (L1)          | Phylum                    | 0.015  | 0.882  |
+| Abundance accuracy (L1)          | Class                     | 0.015  | 0.882  |
+| Abundance accuracy (L1)          | Order                     | 0.035  | 0.882  |
+| Abundance accuracy (L1)          | Family                    | 0.052  | 0.882  |
+| Abundance accuracy (L1)          | Genus                     | 0.069  | 0.882  |
+| Abundance accuracy (L1)          | Species                   | 0.096  | 0.884  |
+| Sum of abundance                 | Phylum                    | 0.989  | 0.118  |
+| Sum of abundance                 | Species                   | 0.924  | 0.118  |
+| Other                            | Weighted UniFrac error    | 0.0024 | 0.0800 |
+| Other                            | Unweighted UniFrac error  | 0.204  | 0.538  |
+| Other                            | Weighted UniFrac (CAMI)   | 0.310  | 0.799  |
+| Other                            | Unweighted UniFrac (CAMI) | 34.0   | 64.00  |
 
 2 important metrics to discuss are purity and completeness.
 
 Savont at the species level does not find any false positives (purity of 1), whereas wf-16s has a lower purity, and thus finds false positives. The completeness on the other hand is a bit lower for Savont, it does not find all species in the ground truth. The completeness for WF-16s is 1, meaning it has found all species that the ground truth expected. I am curious to see if we can possibly lower the amount of missing species in Savont.
 
-The sum of abundance for wf-16s is extremely low (about 11%). I tried to lower the --min_ref_coverage from 90 to 70, which did increase the sum of abundance, but lowered the purity:
+The sum of abundance for wf-16s is extremely low (about 11%). I tried to lower the `--min_ref_coverage` (a minimap2 alignment parameter; Li, 2018) from 90 to 70, which did increase the sum of abundance, but lowered the purity:
 
-Purity
+#### Purity
 
 | Rank | Savont | wf-16s |
 |---|---|---|
 | Genus | 1.0 | 1.0 |
 | Species | 1.0 | 0.68 |
 
-Sum of abundance
+#### Sum of abundance
 - Previously: 11.8%
 - Now: 52%
 
-I could not seem to increase or decrease the species completeness for Savont two. After looking into what caused this lower completeness i found the following in the asv mapping file:
+I could not seem to increase or decrease the species completeness for Savont two. After looking into what caused this lower completeness I found the following in the asv mapping file:
 
-final_asv_69_depth_429 100.00% gEscherichia; -> Greengenes_unannotated
-final_asv_69_depth_429 100.00% gEscherichia;s__albertii; -> Escherichia albertii
+final_asv_69_depth_429 100.00% g__Escherichia; -> Greengenes_unannotated
+final_asv_69_depth_429 100.00% g__Escherichia;s__albertii; -> Escherichia albertii
 
-Savont's species-level misses are explained by unresolved ties between correct matching named-species references and incompletely-annotated genus-only records present in the Greengenes2 database itself. The 2 lines above (from asv_mappings.tsv) (ASV 69, ASV 71) shows the same ASV achieving 100% identity against both a named species and an unannotated genus-only record at the same time, with inconsistent resolution of the tie. I was unsure if this was intended behavior, so i talked to the developer who said the following:
+Savont's species-level misses are explained by unresolved ties between correct matching named-species references and incompletely-annotated genus-only records present in the Greengenes2 database itself. The 2 lines above (from asv_mappings.tsv) (ASV 69, ASV 71) shows the same ASV achieving 100% identity against both a named species and an unannotated genus-only record at the same time, with inconsistent resolution of the tie. I was unsure if this was intended behavior, so I talked to the developer who said the following:
 
 "Here's how savont actually deals with tie breaks right now, which is a bit poorly documented and may be useful to know:
 
@@ -205,11 +214,41 @@ This is done for the following reason: suppose a genome has two 16S copies, with
 
 This has a corollary that if many references are called "g_....; unannotated", it'll prefer the unannotated, since it's seen a lot." - bluenote-1577.
 
+### Time to Run
+There was a very big difference in the time the tools took to run:
+In general Savont was extremely fast, usually taking (all steps including downloading a db) no more than 15 minutes. The EPI2ME workflow was considerably slower, taking an hour and 13 minutes for the simulated data. This trend was followed for all data, Savont is faster than wf-16s is. 
+
 ## Conclusions / discussion
+Across all 3 datasets Savont and wf-16s show a consistent trade-off rather than one tool being better than the other.
 
----
----
+On the simulated dataset, the set with a known true ground truth, Savont appeared to be the most precise tool: It has a very high species purity, meaning every species it finds within the data is actually a species in the data. It reconstructs abundance in a very accurate way (more accurate than wf-16s at every rank), this can be seen by it having both a lower Abundance accuracy (Bray-Curtis) and L1 value. WF-16s is more complete, it finds every species present in the ground truth (a completeness of 1), where Savont misses some (completeness of 0.647). The purity of WF-16s is lower, being around 0.739, this means it calls out species that are not actually present. Its sum of abundances is also extremely low (0.118 at species level), this indicates that a majority of the classified reads are not being connected to any of the true species.
 
+I investigated both shortcomings. I got the sum of abundances to increase to 52% by lowering the `--min_rev_coverage` from 90 -> 70. This caused the purity of the results to drop, finding 8 false positives now, instead of 6. (0.739 -> 0.68). This confirms a completeness and purity trade-off within the tool. Savont species level misses trace back to a specific previously undocumented behavior: When an ASV matches both a named species and a unannotated genus-only greengenes2 record with an *equal* identity, Savonts tie-breaking logic can resolve in favor of the unannotated genus entry, if that pattern is seen frequently across other ASVs.
+
+Finally, Savont was consistently faster across every dataset. 
+
+One limitation of this comparison is worth noting: due to NanoSim behavior (details above in methods), species with short greengenes2 16S sequences were a bit underrepresented. While the actual composition with abundances is fully known, it could have lost some statistical power for the lowest-abundance species. Future work could address this by sourcing additional, longer reference sequences for the affected species, or by resolving the NanoSim length-override hang (GitHub issue #185) to allow direct control of the simulated read-length distribution.
+
+All in all, **Savont seems to be a more conservative, precise, and faster tool. It has an accurate abundance quantification and low false-positve rates. WF-16s is more sensitive and complete, at the cost of precision, abundance accuracy, and speed.** 
+
+# Sources
+Li, H. (2018). Minimap2: Pairwise alignment for nucleotide sequences. _Bioinformatics_, _34_(18), 3094–3100. [https://doi.org/10.1093/bioinformatics/bty191](https://doi.org/10.1093/bioinformatics/bty191)
+
+McDonald, D., Jiang, Y., Balaban, M., Cantrell, K., Zhu, Q., Gonzalez, A., Morton, J. T., Nicolaou, G., Parks, D. H., Karst, S. M., Albertsen, M., Hugenholtz, P., DeSantis, T., Song, S. J., Bartko, A., Havulinna, A. S., Jousilahti, P., Cheng, S., Inouye, M., … Knight, R. (2024). Greengenes2 unifies microbial data in a single reference tree. _Nature Biotechnology_, _42_, 715–718. [https://doi.org/10.1038/s41587-023-01845-1](https://doi.org/10.1038/s41587-023-01845-1)
+
+Meyer, F., Bremges, A., Belmann, P., Janssen, S., McHardy, A. C., & Koslicki, D. (2019). Assessing taxonomic metagenome profilers with OPAL. _Genome Biology_, _20_, 51. [https://doi.org/10.1186/s13059-019-1646-y](https://doi.org/10.1186/s13059-019-1646-y)
+
+Parks, D. H., Chuvochina, M., Chaumeil, P.-A., Rinke, C., Mussig, A. J., & Hugenholtz, P. (2020). A complete domain-to-species taxonomy for Bacteria and Archaea. _Nature Biotechnology_, _38_, 1079–1086. [https://doi.org/10.1101/771964](https://doi.org/10.1101/771964)
+
+Parks, D. H., Chuvochina, M., Waite, D. W., Rinke, C., Skarshewski, A., Chaumeil, P.-A., & Hugenholtz, P. (2018). A standardized bacterial taxonomy based on genome phylogeny substantially revises the tree of life. _Nature Biotechnology_, _36_, 996–1004. [https://doi.org/10.1101/256800](https://doi.org/10.1101/256800)
+
+Sczyrba, A., Hofmann, P., Belmann, P., Koslicki, D., Janssen, S., Dröge, J., Gregor, I., Majda, S., Fiedler, J., Dahms, E., Bremges, A., Fritz, A., Garrido-Oter, R., Jørgensen, T. S., Shapiro, N., Blood, P. D., Gurevich, A., Bai, Y., Turaev, D., … McHardy, A. C. (2017). Critical Assessment of Metagenome Interpretation—A benchmark of metagenomics software. _Nature Methods_, _14_(11), 1063–1071. [https://doi.org/10.1038/nmeth.4458](https://doi.org/10.1038/nmeth.4458)
+
+Shaw, J., Riisgaard-Jensen, M., Andersen, K. S., Kirkegaard, R., Dueholm, M. K. D., & Li, H. (n.d.). Sensitive long-read amplicon sequence variant recovery with savont. _bioRxiv_. Retrieved [https://www.biorxiv.org/content/10.64898/2026.05.26.727271.full.pdf](https://www.biorxiv.org/content/10.64898/2026.05.26.727271.full.pdf)
+
+Yang, C., Chu, J., Warren, R. L., & Birol, I. (2017). NanoSim: Nanopore sequence read simulator based on statistical characterization. _GigaScience_, _6_(4). [https://doi.org/10.1101/044545](https://doi.org/10.1101/044545)
+
+Yang, C., Lo, T., Nip, K. M., Hafezqorani, S., Warren, R. L., & Birol, I. (2021). Characterization and simulation of metagenomic nanopore sequencing data with Meta-NanoSim. _bioRxiv_. [https://doi.org/10.1101/2021.11.19.469328](https://doi.org/10.1101/2021.11.19.469328)
 # Appendix: Commands
 
 **Code Block 1**
@@ -297,8 +336,8 @@ seqkit split -i /home/ramon/savont_db/greengenes2-2024.09/gg2_2024_09_toSpecies_
 SPECIES_LIST="/home/ramon/species_list.txt"
 cd /home/ramon/savontdb/greengenes2-2024.09
 while IFS=" " read genus species; do
-file_wanted=(find ./ -iname "*genus" -iname "species*")
-cp $file_wanted /home/ramon/custom_set/"genus""species".fasta
+	file_wanted=(find ./ -iname "*genus" -iname "species*")
+	cp $file_wanted /home/ramon/custom_set/"genus""species".fasta
 done < "SPECIES_LIST"
 ```
 
@@ -384,3 +423,4 @@ savont-analyse profile2CAMI --input_dir /home/redman/jaar4/runs_out_greengenes2/
 ```bash
 opal.py -g ground_truth.profile abundance.profile wf-16s.profile -o /home/redman/jaar4/runs_out_greengenes2/opal
 ```
+
