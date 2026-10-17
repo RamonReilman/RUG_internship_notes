@@ -1,5 +1,5 @@
 # Project Timeline & Planning
-This file will contain everything related to the Timeline of my internship, a.k.a. the Plan of Action. It will use the Hanze supplied template to create a timeline for the next 20 weeks, to make a clear showcase how what and how I will do things. The template starts with a tableIhave to fill in.
+This file will contain everything related to the Timeline of my internship, a.k.a. the Plan of Action. It will use the Hanze supplied template to create a timeline for the next 20 weeks, to make a clear showcase how what and how I will do things. The template starts with a table I have to fill in.
 
 | Student               | Ramon Reilman                                                                                                       |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -51,7 +51,20 @@ For the evaluation of the tools I will be given data by my supervisor. This data
 Comparisons of the tools will be logged within the daily notes, but eventually there will be a compilation of the results from all of the testing, comparing, evaluation in a single note, that will conclude with what tool works the best based on the testing I had done.
 
 ### Evaluation of reference databases
-The second part of the project will be about evaluation available 16S and 18S reference databases (Silva, PR2, etc) to see how much these suit microbial communities found in marine environments. If it is needed, I will need to create a custom database combined from the previously mentioned examples. Or run the new workflow on different databases separately and combine these results into 1 result. 
+The second part of the project will be about evaluation available 16S and 18S reference databases (Silva, PR2, etc) to see how much these suit microbial communities found in marine environments. If it is needed, I will need to create a custom database combined from the previously mentioned examples. Or run the new workflow on different databases separately and combine these results into 1 result. Following the direction of my supervisor, this wil be done using ONT long read data generated with a universal primer pair that amplifies both the 16S and 18S rRNA gene in a single reaction, rather than separately. This allows the same dataset to be classified against both a 16S and an 18S database.
+
+This evaluation will be prepared by literary research into how reference databases suitability has been assessed in comparable studies. The CABO-16S database framework evaluates a combined SILVA / PR2 database against the standard SILVA across different environment types, including marine. This is done by comparing the percentage of ASVs classified at each taxonomic rank (Eitel et al., 2025). A comparable approach was used to assess reference database choice for marine eukaryotic 18S data, comparing NCBI nt and SILVA against deep-sea sediment samples and reporting the number of taxa reported per database (Liu & Zhang, 2021).
+
+
+#### Evaluation steps
+- Primer and data. Obtain ONT long-read amplicon data using universal 16S / 18S primer pair, so both domains are represented in the same run
+- Real-data classification. Run the same dataset through the workflow separately against a 16S-only database and an 18S-only database.
+- Marine suitability assessment. For each database, record the percentage of reads / ASVs classified at each taxonomic rank and the percentage left unclassified, following the comparison approach used for the combine SILVA / PR2 database (Eitel et al., 2025, Liu & Zhang, 2021)
+Based on the above, i will have to decide whether an existing database is sufficient for the final workflow, or whether some sort of custom (or combined database) needs to be built.
+
+#### Products
+
+As with Milestone 1, the comparisons made for each database will be logged in the daily notes, with an eventual compiled report summarizing per-database classification rates, taxonomic resolution, and a recommendation for which database(s) to use going forward. 
 
 ### Workflow development
 The last planned part of this project more or less requires the last previous tasks to be done and completed, as they will be combined in a new workflow. From what I could tell from the MinION GUI is that customization for the workflows (the changing of parameters and such) seems to be very limited. By implementing and creating a new workflow, fit for marine environments, it will be more accurate for the any and all marine amplicon datasets interested in viral or bacterial taxonomic classification.
@@ -106,6 +119,16 @@ Project data will be stored on the RUG computing cluster. This includes sequenci
 This data will remain there, for as long as it is required for the project. Code and workflow development will be managed using private github repositories. The daily documentation is also stored on a private github repo, but will be seperated from the code and workflow files. Git is used as a version control tool, in all of the repositories this is used. 
 
 ## Sources
-Sczyrba, A., Hofmann, P., Belmann, P., Koslicki, D., Janssen, S., Dröge, J., Gregor, I., Majda, S., Fiedler, J., Dahms, E., Bremges, A., Fritz, A., Garrido-Oter, R., Jørgensen, T. S., Shapiro, N., Blood, P. D., Gurevich, A., Bai, Y., Turaev, D., … McHardy, A. C. (2017). Critical Assessment of Metagenome Interpretation—A benchmark of metagenomics software. _Nature Methods_, _14_(11), 1063–1071. [https://doi.org/10.1038/nmeth.4458](https://doi.org/10.1038/nmeth.4458)
+Apprill, A., McNally, S., Parsons, R., & Weber, L. (2015). Minor revision to V4 region SSU rRNA 806R gene primer greatly increases detection of SAR11 bacterioplankton. _Aquatic Microbial Ecology_, _75_(2), 129–137. [https://doi.org/10.3354/ame01753](https://doi.org/10.3354/ame01753)
 
-Shaw, J., Riisgaard-Jensen, M., Andersen, K. S., Kirkegaard, R., Dueholm, M. K. D., & Li, H. (2026). _Sensitive long-read amplicon sequence variant recovery with savont_ (p. 2026.05.26.727271). bioRxiv. [https://doi.org/10.64898/2026.05.26.727271](https://doi.org/10.64898/2026.05.26.727271)
+Liu, J., & Zhang, H. (2021). Combining Multiple Markers in Environmental DNA Metabarcoding to Assess Deep-Sea Benthic Biodiversity. _Frontiers in Marine Science_, _8_, 684955. [https://doi.org/10.3389/fmars.2021.684955](https://doi.org/10.3389/fmars.2021.684955)
+
+Parada, A. E., Needham, D. M., & Fuhrman, J. A. (2016). Every base matters: Assessing small subunit rRNA primers for marine microbiomes with mock communities, time series and global field samples. _Environmental Microbiology_, _18_(5), 1403–1414. [https://doi.org/10.1111/1462-2920.13023](https://doi.org/10.1111/1462-2920.13023)
+
+Quince, C., Lanzen, A., Davenport, R. J., & Turnbaugh, P. J. (2011). Removing noise from pyrosequenced amplicons. _BMC Bioinformatics_, _12_, 38. [https://doi.org/10.1186/1471-2105-12-38](https://doi.org/10.1186/1471-2105-12-38)
+
+Sczyrba, A., Hofmann, P., Belmann, P., Koslicki, D., Janssen, S., Dröge, J., Gregor, I., Majda, S., Fiedler, J., Dahms, E., Bremges, A., Fritz, A., Garrido-Oter, R., Jørgensen, T. S., Shapiro, N., Blood, P. D., Gurevich, A., Bai, Y., Turaev, D., & McHardy, A. C. (2017). Critical Assessment of Metagenome Interpretation—A benchmark of metagenomics software. _Nature Methods_, _14_(11), 1063–1071. [https://doi.org/10.1038/nmeth.4458](https://doi.org/10.1038/nmeth.4458)
+
+Shaw, J., Riisgaard-Jensen, M., Andersen, K. S., Kirkegaard, R., Dueholm, M. K. D., & Li, H. (2026). Sensitive long-read amplicon sequence variant recovery with savont. _bioRxiv_. [https://doi.org/10.64898/2026.05.26.727271](https://doi.org/10.64898/2026.05.26.727271)
+
+Walters, W., Hyde, E. R., Berg-Lyons, D., Ackermann, G., Humphrey, G., Parada, A., Gilbert, J. A., Jansson, J. K., Caporaso, J. G., Fuhrman, J. A., Apprill, A., & Knight, R. (2016). Improved Bacterial 16S rRNA Gene (V4 and V4-5) and Fungal Internal Transcribed Spacer Marker Gene Primers for Microbial Community Surveys. _mSystems_, _1_(1), e00009-15. [https://doi.org/10.1128/mSystems.00009-15](https://doi.org/10.1128/mSystems.00009-15)
