@@ -229,7 +229,7 @@ Finally, Savont was consistently faster across every dataset.
 
 One limitation of this comparison is worth noting: due to NanoSim behavior (details above in methods), species with short greengenes2 16S sequences were a bit underrepresented. While the actual composition with abundances is fully known, it could have lost some statistical power for the lowest-abundance species. Future work could address this by sourcing additional, longer reference sequences for the affected species, or by resolving the NanoSim length-override hang (GitHub issue #185) to allow direct control of the simulated read-length distribution.
 
-All in all, **Savont seems to be a more conservative, precise, and faster tool. It has an accurate abundance quantification and low false-positve rates. WF-16s is more sensitive and complete, at the cost of precision, abundance accuracy, and speed.** 
+All in all, *Savont seems to be a more conservative, precise, and faster tool. It has an accurate abundance quantification and low false-positve rates. WF-16s is more sensitive and complete, at the cost of precision, abundance accuracy, and speed.* 
 
 # Sources
 Li, H. (2018). Minimap2: Pairwise alignment for nucleotide sequences. _Bioinformatics_, _34_(18), 3094–3100. [https://doi.org/10.1093/bioinformatics/bty191](https://doi.org/10.1093/bioinformatics/bty191)
